@@ -26,6 +26,6 @@ hamburger.addEventListener('click', () => {
 navLinks.forEach((link) => {
     link.addEventListener('click', () => {
         nav.classList.toggle('nav-visible');
-        console.log("i worked")
+        
     })
 })
