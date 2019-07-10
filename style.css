@@ -1,0 +1,268 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Bree Serif', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x:hidden;
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+}
+
+#hamburger{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 2em;
+    display: none;
+    z-index: 1;
+}
+.nav-visible{
+display:flex;
+}
+nav{
+    position: absolute;
+    top: 2%;
+ right: 2%;
+ font-size:1.5em;
+ display: flex;
+ flex-direction: row;
+ z-index: 1;
+}
+nav a{
+    text-decoration:none;
+    color: #333;
+    font-weight: normal;
+    padding: 0 1em;
+}
+.hero{
+    width: 100vw;
+    height: 90vh;
+    clip-path:polygon(0 0,100% 15%,100% 90%,0 75%);
+    background-image:url(img/hero-img.jpg);
+  background-size:cover;
+  background-position: 50% 70%;
+ position: relative;
+ 
+}
+.hero-text{
+    font-size:5.8rem;
+    color: white;
+    text-transform: capitalize;
+    position:absolute;
+    top: 20%;
+    left:16%;
+}
+.hero-text span{
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Shadows Into Light', cursive;
+    text-transform: lowercase;
+   
+}
+.specialities{
+    position: relative;
+    text-align: center;
+}
+img#photographer{
+    border-radius: 50%;
+    width: 16%;
+    height:auto;
+    /* position: relative;
+    top:-17%;
+    left:50%;
+    transform:translate(-50%) */
+}
+.showcase-container{
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 10%;
+}
+.cards{
+    background: #fff;  
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    
+    display: flex;
+}
+
+
+.left img{
+    width: 100%;
+    height: 100%;
+}
+.desc{
+    padding: 2em;
+    text-align:start;
+    text-transform:capitalize;
+    line-height: 2em;
+}
+.desc h2{
+    margin-bottom: 1em;
+}
+
+.testimonials{
+    background:url('img/terrain.jpg');
+    background-attachment:fixed;
+    text-align: center;
+    text-transform: capitalize;
+}
+.testimonials-container{
+    max-width: 70%;
+    margin:0em auto;
+    padding: 2em;
+    color: white;
+    font-size:1.2em;
+    line-height: 1.6em;
+    font-weight: normal;
+}
+.testimonials-container img{
+    border-radius:50%;
+    width: 5em;
+}
+p.comment{
+    margin: 1.8em;
+}
+.comment-box{
+    display: none;
+  
+}
+.visible{
+    display:block;
+   animation: fader 1s ease-in-out;
+    
+}
+
+ .recent{
+     text-align:center;
+ }   
+ .recent h1{
+     margin-top:2em;
+     font-size: 3em;
+ }
+
+div.photo-grid{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.5em;
+    padding: 10em;
+}
+.photo-grid img{
+    width: 100%;
+    
+}
+.contact-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 5em 0;
+}
+.contact-container button{
+    border: none;
+    background-color: #f23a2e;
+    
+    color: white;
+    padding:1em 2em;
+    font-size: 1em;
+}
+.contact-container button:hover{
+    background: #f23b2ef8;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 5em;
+    background: #4d4d4d;
+    color: white;
+}
+footer h1{
+    font-size: 3em;
+}
+.hire i,.connect i{
+    font-size: 3em;
+    color: #999;
+    margin: 0.5em;
+}
+.connect i:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.hire{
+    margin-bottom: 3em;
+    padding: 1em;
+}
+.hire ul{
+    list-style: none;
+    font-size: 1.2em;
+}
+.creator{
+    margin-top: 5em;
+    
+}
+.connect ,.creator{
+    text-align:center;
+}
+
+@keyframes fader {
+    from { opacity: 0.0; }
+    to   { opacity: 1.0; }
+  }
+  @media screen and (max-width:768px){
+     
+      .hero{
+          background-position: 75%;
+      }
+      .hero-text{
+          font-size: 4.5em;
+          top:3%;
+          left:2%;
+      }
+      nav{
+          display:none;
+          top:7%;
+          right:4%;
+          flex-direction: column;
+          background: #fff;
+          box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+         position: fixed;
+      }
+      nav a{
+          padding: 1em;
+      }
+      #hamburger{
+          display: block;
+          position:fixed;
+      }
+    .showcase-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+    }
+    
+    .testimonials-container{
+        max-width: 100%;
+    }
+    div.photo-grid{
+        padding: 2em;
+    }
+    .contact-container,.cards,footer{
+        flex-direction: column;
+    }
+    .contact-container button{
+        margin: 1em 0;
+    text-align: center;
+    }
+    footer{
+        padding:1em;
+    }
+    .hire i,.connect i{
+        font-size: 2.5em;
+        
+    }
+
+}
