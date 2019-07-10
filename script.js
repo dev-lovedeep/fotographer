@@ -19,6 +19,10 @@ setInterval(visible, 3000);
 
 const hamburger = document.querySelector("#hamburger")
 const nav = document.querySelector('nav')
+const navLinks = document.querySelector('nav a')
 hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-visible');
+})
+navLinks.addEventListener('click', () => {
     nav.classList.toggle('nav-visible');
 })
