@@ -4,17 +4,50 @@
     padding:0;
     font-family: 'Bree Serif', serif;
 }
-body,html{
+html{
+    scroll-behavior: smooth;
+}
+body{
     overflow-x:hidden;
+}
+.hero-wrapper{
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+}
+#hamburger{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 2em;
+    display: none;
+    z-index: 1;
+}
+.nav-visible{
+display:flex;
+}
+nav{
+    position: absolute;
+    top: 2%;
+ right: 2%;
+ font-size:1.5em;
+ display: flex;
+ flex-direction: row;
+ z-index: 1;
+}
+nav a{
+    text-decoration:none;
+    color: #333;
+    font-weight: normal;
+    padding: 0 1em;
 }
 .hero{
     width: 100vw;
     height: 90vh;
-    clip-path:polygon(0 0,100% 0,100% 90%,0 75%);
-    background:url(img/hero-img.jpg);
+    clip-path:polygon(0 0,100% 15%,100% 90%,0 75%);
+    background-image:url(img/hero-img.jpg);
   background-size:cover;
-  background-position: bottom;
+  background-position: 50% 70%;
  position: relative;
+ 
 }
 .hero-text{
     font-size:5.8rem;
@@ -34,7 +67,7 @@ body,html{
 }
 .specialities{
     position: relative;
-    background: aquamarine;
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
     text-align: center;
 }
 img#photographer{
@@ -162,12 +195,20 @@ footer h1{
     color: #fff;
     cursor: pointer;
 }
+.hire{
+    margin-bottom: 3em;
+    padding: 1em;
+}
 .hire ul{
     list-style: none;
     font-size: 1.2em;
 }
 .creator{
     margin-top: 5em;
+    
+}
+.connect ,.creator{
+    text-align:center;
 }
 
 @keyframes fader {
@@ -175,6 +216,31 @@ footer h1{
     to   { opacity: 1.0; }
   }
   @media screen and (max-width:768px){
+     
+      .hero{
+          background-position: 75%;
+      }
+      .hero-text{
+          font-size: 4.5em;
+          top:3%;
+          left:2%;
+      }
+      nav{
+          display:none;
+          top:7%;
+          right:4%;
+          flex-direction: column;
+          background: #fff;
+          box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+         position: fixed;
+      }
+      nav a{
+          padding: 1em;
+      }
+      #hamburger{
+          display: block;
+          position:fixed;
+      }
     .showcase-container{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4,1fr);
@@ -193,4 +259,12 @@ footer h1{
         margin: 1em 0;
     text-align: center;
     }
+    footer{
+        padding:1em;
+    }
+    .hire i,.connect i{
+        font-size: 2.5em;
+        
+    }
+
 }

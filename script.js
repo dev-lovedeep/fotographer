@@ -14,3 +14,11 @@ function visible() {
 
 }
 setInterval(visible, 3000);
+
+//code for hamburger menu
+
+const hamburger = document.querySelector("#hamburger")
+const nav = document.querySelector('nav')
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-visible');
+})
