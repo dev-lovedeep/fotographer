@@ -23,9 +23,9 @@ const navLinks = document.querySelector('nav a')
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('nav-visible');
 })
-navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
+for(let i=0;i<navLinks.length;i++){
+    navLinks[i].addEventListener('click', () => {
         nav.classList.toggle('nav-visible');
-        
+        console.log("i worked")
     })
-})
+}
